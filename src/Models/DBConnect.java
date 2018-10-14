@@ -105,6 +105,4 @@ public class DBConnect {
                 ps.close();
         }
     }//end of insertContactIntoDB
-
-
 }//end of DBConnect

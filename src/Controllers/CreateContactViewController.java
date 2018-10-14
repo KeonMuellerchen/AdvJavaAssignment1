@@ -18,17 +18,11 @@ import java.util.ResourceBundle;
 
 public class CreateContactViewController implements Initializable {
 
-    @FXML private TextField contactIDTextField;
-    @FXML private TextField imageTextField;
     @FXML private TextField firstNameTextField;
     @FXML private TextField lastNameTextField;
     @FXML private TextField addressTextField;
     @FXML private TextField phoneTextField;
     @FXML private DatePicker birthdayDatePicker;
-    @FXML private ImageView pictureImageView;
-    @FXML private Button chooseImageButton;
-    @FXML private Button cancelButton;
-    @FXML private Button saveButton;
 
     /**
      * Initializes the controller class.
@@ -60,7 +54,7 @@ public class CreateContactViewController implements Initializable {
     public void saveContactButtonPushed(ActionEvent event) throws IOException {
 
         Contact newContact = new Contact(
-                //contactIDTextField.getPrefColumnCount(),
+
                 0,
                 firstNameTextField.getText(),
                 lastNameTextField.getText(),
@@ -68,7 +62,6 @@ public class CreateContactViewController implements Initializable {
                 phoneTextField.getText(),
                 birthdayDatePicker.getValue(),
                 "ProfilePicture.jpg");
-                //imageTextField.getText());
 
         System.out.printf("New contact added: %s%n", newContact.toString());
         try {

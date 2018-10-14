@@ -156,5 +156,4 @@ public class Contact {
     public String toString() {
         return String.format("%s %s", firstName, lastName);
     }
-
 }//end of Contact
