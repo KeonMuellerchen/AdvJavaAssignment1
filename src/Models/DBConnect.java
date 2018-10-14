@@ -77,7 +77,7 @@ public class DBConnect {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/contacts?useSSL=false",  userName, password);
 
             //2. create a sql statement
-            String sql = "INSERT INTO person (firstName, lastName, address, phoneNumber, birthday, image) VALUES (?, ?, ?, ?, ?, ?);";
+            String sql = "INSERT INTO person (firstName, lastName, address, phone, birthday, image) VALUES (?, ?, ?, ?, ?, ?);";
 
             //3. Create a prepared statement
             ps = conn.prepareStatement(sql);
@@ -96,7 +96,7 @@ public class DBConnect {
         }
         catch (SQLException e)
         {
-            System.err.println("Error" + e);
+            System.err.println("Error! " + e.getMessage());
         }
         finally {
             if (conn != null)

@@ -1,5 +1,4 @@
 package Models;
-import javafx.scene.image.Image;
 
 import java.time.LocalDate;
 
@@ -9,7 +8,6 @@ public class Contact {
     private Integer personID;
     private String firstName, lastName, address, phoneNumber, image;
     private LocalDate birthday;
-    //private Image image;
 
     /**
      * This constructor will set all the instance variables to have a value.
@@ -150,13 +148,13 @@ public class Contact {
         this.image = image;
     }
 
-    /*
-    public Image getImage() {
-        return image;
+    /**
+     * Override toString method
+     * @return
+     */
+    @Override
+    public String toString() {
+        return String.format("%s %s", firstName, lastName);
     }
 
-    public void setImage(Image image) {
-        this.image = image;
-    }
-    */
 }//end of Contact

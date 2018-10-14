@@ -60,16 +60,17 @@ public class CreateContactViewController implements Initializable {
     public void saveContactButtonPushed(ActionEvent event) throws IOException {
 
         Contact newContact = new Contact(
-                contactIDTextField.getPrefColumnCount(),
+                //contactIDTextField.getPrefColumnCount(),
+                0,
                 firstNameTextField.getText(),
                 lastNameTextField.getText(),
                 addressTextField.getText(),
                 phoneTextField.getText(),
                 birthdayDatePicker.getValue(),
-                imageTextField.getText());
-                //pictureImageView.getImage());
+                "ProfilePicture.jpg");
+                //imageTextField.getText());
 
-        System.out.printf("New contact: %s%n", newContact);
+        System.out.printf("New contact added: %s%n", newContact.toString());
         try {
             DBConnect.insertContactIntoDB(newContact);
         } catch (SQLException e) {
