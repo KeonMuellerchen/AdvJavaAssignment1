@@ -57,7 +57,7 @@ public class Contact {
         if (!firstName.isEmpty() && firstName.length() <20)
             this.firstName = firstName;
         else
-            throw new IllegalArgumentException("Fist name must be between 0-20 characters and not empty");
+            throw new IllegalArgumentException("First name must be between 0-20 characters and not empty");
     }
 
     /**
